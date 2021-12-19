@@ -1,4 +1,4 @@
-@use 'reset';
+@use '_reset';
 @use '_vars';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700');
 
@@ -10,8 +10,12 @@ body{
     background-color: vars.$alt-color;
 
 }
-.container {
-    height: calc(100vh - 155px);
+.App{
+    height: 100vh;
+    position: relative;
+}
+// .container {
+//     height: 80vh;
    
-  }
+// }
   

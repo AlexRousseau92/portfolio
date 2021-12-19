@@ -15,7 +15,7 @@ const App = () => {
   }
 
   return (
-    <>
+    <div className='App'>
    <Navbar menuOpen={burger} toggleMenu={toggleBurger} routes={data}/>
     <Routes>
    {
@@ -25,7 +25,7 @@ const App = () => {
    }
      </Routes>
     <Footer />
-    </>
+    </div>
   )
 }
 export default App;

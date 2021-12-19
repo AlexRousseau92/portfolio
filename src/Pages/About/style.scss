@@ -1,13 +1,17 @@
 @use '../../Styles/vars';
 
-.about{
+.about {
+    height: 80vh;
+    width: 100%;
+    background-color: vars.$alt-color;
     display: flex;
+
     &-left{
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        margin-right: 10px;
         width: 50%;
+        margin-right: 1rem;
+
     }
     &-description{
         display: flex;
@@ -15,10 +19,7 @@
         justify-content: center;
         align-items: flex-end;
         height: 100%;
-        width: 75%;
         text-align: right;
-        font-size: 1.3rem;
-        
     }
     &-title{
         font-size: 2rem;
@@ -27,8 +28,9 @@
         color: vars.$primary-color;
     }
     &-text{
-        width: 100%;
-        line-height: 2.5rem;
+        width: 80%;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
         animation: descriptionAnimation 0.8s ease-out;
         color: vars.$primary-color;
     }
@@ -48,98 +50,103 @@
         justify-content: center;
         align-items: flex-start;
         width: 50%;
-        margin-left: 10px;
+
+      
     }
     &-anchor{
-        width: 300px;
+        width:40%;
+        min-width: 250px;
+        max-width: 350px;
         animation: anchorAnimation 0.8s ease-out;
     }
-}
-
-@keyframes descriptionAnimation {
-    from {
-        opacity: 0;
-        transform: translateY(200px);
+    
+    @keyframes descriptionAnimation {
+        from {
+            opacity: 0;
+            transform: translateY(200px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
+    @keyframes titleAnimation {
+        from {
+            opacity: 0;
+            transform: translateY(-200px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
-}
-@keyframes titleAnimation {
-    from {
-        opacity: 0;
-        transform: translateY(-200px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-@keyframes anchorAnimation {
-    from {
-        opacity: 0;
-        transform: translateX(200px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
+    @keyframes anchorAnimation {
+        from {
+            opacity: 0;
+            transform: translateX(200px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
     }
 }
 
 @media screen and (max-width:767.98px) {
-    
-.about-left{
-    width: 100%;
-}
-.about-description{
-    width: 100%;
-    font-size: 1.3rem;
-    text-align: left;
-    align-items: flex-start;
-}
-.about-text{
-    line-height: 2rem;
-    padding: 10px;
-    margin: 20px 5px;
-}
-.about-title{
-    text-align: center;
-    padding: 10px;
-    margin: 0 5px ;
-}
-.about-anchor{
-    display: none;
-}
-.about-right{
-    display: none;
-}
-  
-@keyframes titleAnimation {
-    from {
-        opacity: 0;
-        transform: translateX(400px);
+
+    .about{
+        
+        height: 80vh;
+
+        &-left{
+            width: 100%;
+            margin: 0;
+        }
+        &-description{
+            width: 100%;
+            text-align: center;
+            align-items: center;
+        }
+        &-text{
+            font-size: 1.3rem;
+            line-height: 2.2rem;
+        }
+        &-right{
+            display: none;
+        }
+        &-anchor{
+            display: none;
+        }
     }
-    to {
-         opacity: 1;
-        transform: translateX(0px);
+
+    @keyframes titleAnimation {
+        from {
+            opacity: 0;
+            transform: translateX(400px);
+        }
+        to {
+             opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    @keyframes descriptionAnimation {
+        from {
+            opacity: 0;
+            transform: translateX(-200px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
     }
 }
-@keyframes descriptionAnimation {
-    from {
-        opacity: 0;
-        transform: translateX(-200px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}       
-} 
 @media screen and (max-width: 321px) {
+    
+    .about-title{
+        font-size: 1.4rem;
+    }
     .about-text{
         line-height: 1.5rem;
-        padding: 5px;
-        margin: 5px;
+        font-size: 1.1rem;
     }
 }

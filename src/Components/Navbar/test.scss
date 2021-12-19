@@ -2,24 +2,25 @@
 
 .navbar{
     height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display:flex;
+    align-items:center; 
+    justify-content:space-between;   
+    // padding: 0px 10px;
+    font-size:1.1rem;
+    margin:  5px;
 
     &-links{
         display:flex;  
     }
     &-link{
-        font-size: 1.3rem;
+        // padding:0 15px;
+        color: vars.$primary-color;
         font-weight: bold;
         text-transform: uppercase;
         text-decoration:none;
-        margin: 0 1rem;
     }
     &-logo{
         height: 4.6rem;
-        margin-left: 1rem;
-        
     }
     &-burger{
         display:none;
@@ -37,9 +38,10 @@
 @media screen and (max-width: 767.98px) {
 
     .navbar{
-       
+        // padding: 10px;
+        
+
         &-links{
-            z-index: 9999;
             overflow:hidden;
             display:flex;
             flex-direction:column;
@@ -47,7 +49,7 @@
             width:0;
             height: auto;
             position:absolute;
-            top:10vh;
+            top:80px;
             right:0;
             bottom: 0;     
             background: vars.$primary-color;  
@@ -59,7 +61,7 @@
             display:flex;
             justify-content: center;
             align-items: center;
-            margin:1.5rem;
+            // padding:1.5rem;
             font-size: 1.9rem; 
             transition: all .4s ease-in-out;
             transform: translateX(101%);
@@ -72,10 +74,8 @@
         }
         &-logo{
             height: 60px;
-
         }
         &-burger{
-            margin: 5px 1rem;
             display:block;
             position:relative;
             padding:0;
@@ -151,6 +151,7 @@
         transition: all 1.3s ease-out;
       }
 }
+
 @media screen and (min-width:768px) {
     
     .navbar-link:not(.active):after{
@@ -167,6 +168,8 @@
         
     }
 }
-@media screen and (max-width: 321px) {
-   
+@media screen and (max-width:321px) {
+    .navbar{
+        padding: 0;
+    }
 }

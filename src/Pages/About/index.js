@@ -6,7 +6,7 @@ const About = () => (
             <section className="container about">
                 <div className="about-left">
                     <div className="about-description">
-                        <h1 className='about-title'>Hey,</h1><br></br>
+                        <h1 className='about-title'>Hello there</h1><br></br>
                         <p className='about-text'> Après quelques années, <br></br>de navigation sur la Seine en tant que capitaine de bateau,
                             j'ai décidé de changer complètement de cap et de me tourner vers ce qui m'a toujours attiré
                             le développement web. J'ai suivi une formation de 6 mois <span className="about-js">"Développeur Web FullStack Javascript"</span> avec l'école
@@ -18,6 +18,7 @@ const About = () => (
                     <img className="about-anchor" src="./Anchor.svg" alt="Demi logo Alex" />
                 </div>
             </section>
+            
 );
 
 export default About;
