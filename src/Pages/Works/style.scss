@@ -1,0 +1,114 @@
+@use '../../styles/vars';
+
+.works{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-card{
+        
+        display: flex;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        width: 75%;
+        animation: cardAnimation 0.8s ease-out;
+        &-left{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            
+            
+        }
+
+        &-title{
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: vars.$primary-color;
+            padding: 1rem;
+            margin-top: 1rem;
+
+        }
+        &-description{
+            font-size: 1rem;
+            line-height: 2rem;
+            text-align: center;
+            color: vars.$primary-color;
+            padding: 1rem;
+        }
+        &-img{
+            width: 300px;
+        }
+        &-medias{
+           display: flex;
+           
+            & i {
+                color: vars.$primary-color;
+                font-size: 1.5rem;
+                margin: 1rem;
+                padding: 1rem;
+                cursor: pointer;
+            }
+            
+        }
+    }
+
+    @keyframes cardAnimation {
+        from {
+            opacity: 0;
+            transform: translateY(-200px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}
+
+
+
+@media screen and (max-width:767.98px) {
+
+    .works-card-title{
+        font-size: 1.7rem;
+    }
+    .works-card-description{
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        text-align: center;
+        color: vars.$primary-color;
+    }
+    .works-card-img{
+        width: 250px;
+    }
+    .works-card-medias i {
+        margin: 0.5rem;
+    }
+    
+}
+    
+@media screen and (max-width: 321px) {
+    
+    .works-card-title{
+        font-size: 1.4rem;
+    }
+
+    .works-card-description{
+        font-size: 1rem;
+        line-height: 1.1rem;
+    }
+    .works-card-img{
+        width: 150px;
+        border-radius: 0;
+    }
+    .works-card-medias i{
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+   
+}
+
+    
+   

@@ -15,7 +15,7 @@ const About = () => (
                     </div>
                 </div>
                 <div className="about-right">
-                    <img className="about-anchor" src="./media/Anchor.svg" alt="Demi logo Alex" />
+                    <img className="about-anchor" src="./Anchor.svg" alt="Demi logo Alex" />
                 </div>
             </section>
 );

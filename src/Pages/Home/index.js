@@ -10,7 +10,7 @@ const Home = () => (
             </div>
         </div>
         <div className="home-right">
-            <img className="home-hero" src="./media/Alex.png" alt="img d'Alex moitiée du visage"></img>
+            <img className="home-hero" src="./Alex.png" alt="img d'Alex moitiée du visage"></img>
         </div>
     </section>
 );
