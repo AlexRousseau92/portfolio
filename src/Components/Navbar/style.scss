@@ -1,0 +1,167 @@
+@use '../../styles/vars';
+
+.navbar{
+
+    display:flex;
+    align-items:center; 
+    justify-content:space-between;   
+    padding: 0px 10px;
+    font-size:1.1rem;
+
+    &-links{
+        display:flex;  
+    }
+    &-link{
+        padding:0 15px;
+        color: vars.$primary-color;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration:none;
+    }
+    &-logo{
+        height: 4.6rem;
+    }
+    &-burger{
+        display:none;
+    }
+}
+.active::after{
+    display:block;
+    content:"";
+    width: 100%;
+    height:2px;
+    background: vars.$primary-color;
+    transition: width 0.6s;
+}
+
+@media screen and (max-width: 767.98px) {
+
+    .navbar{
+        padding: 10px;
+        
+
+        &-links{
+            overflow:hidden;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            width:0;
+            height: auto;
+            position:absolute;
+            top:80px;
+            right:0;
+            bottom: 0;     
+            background: vars.$primary-color;  
+            transform: translateX(110%);
+            transition: all .5s ease-in-out;
+        }
+
+        &-link{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding:1.5rem;
+            font-size: 1.9rem; 
+            transition: all .4s ease-in-out;
+            transform: translateX(101%);
+            transition: all .5s ease-in-out;
+            color:vars.$alt-color;
+        }
+        &-link:hover{
+            padding-left:2rem;
+            letter-spacing: 5px;
+        }
+        &-logo{
+            height: 60px;
+        }
+        &-burger{
+            display:block;
+            position:relative;
+            padding:0;
+            width:45px;
+            height:45px;
+            border:none;
+            background:transparent;
+            cursor:pointer;
+        }
+        &-bar{
+            display:block;    
+            width:45px;
+            height:4px;  
+            border-radius:3px;
+            background: vars.$primary-color;
+            transition: all .5s ease-in-out;   
+        }
+        &-bar::before, &-bar::after{
+            content:"";
+            width:45px;
+            height:4px;
+            position:absolute; 
+            left:0;  
+            background: vars.$primary-color;
+            border-radius:3px;    
+            transition: all .5s ease-in-out;
+        }
+        &-bar::before{
+            transform:translateY(-12px)
+        }
+        &-bar::after{
+            transform:translateY(12px)
+        }
+
+    }
+
+    .show-nav .navbar-links { 
+        width:100vw;    
+        transform: translateX(0);
+    }
+    .show-nav .navbar-link  {        
+        transform: translateX(0);    
+    }
+    .show-nav .navbar-bar {
+        width:0;
+        background:transparent;    
+    }
+      .show-nav .navbar-bar::before {
+        transform:rotate(45deg);
+    }
+      .show-nav .navbar-bar::after {
+        transform:rotate(-45deg);
+    }
+
+    .active{ 
+        display: flex;
+        text-decoration: underline  ;
+    }
+      .active::after{
+        width: 0;
+       
+    }
+    .show-nav .first {      
+        transition: all 1s ease-out;
+      } 
+      .show-nav .second {      
+        transition: all 1.1s ease-out;
+      } 
+      .show-nav .third {      
+        transition: all 1.2s ease-out;
+      } 
+      .show-nav .four {      
+        transition: all 1.3s ease-out;
+      }
+}
+
+@media screen and (min-width:768px) {
+    
+    .navbar-link:not(.active):after{
+        display:block;
+        content:"";
+        width: 0%;
+        height:2px;
+        background:vars.$primary-color;
+        transition:width 0.9s;
+    }
+    .navbar-link:hover:not(.active):after{
+        width: 100%;
+    }
+}
