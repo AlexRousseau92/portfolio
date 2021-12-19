@@ -2,13 +2,14 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './style.scss';
+import logo from '../../Assets/AR_logo_blue.png';
 
 const Navbar = ({menuOpen, toggleMenu, routes}) => {
 
       return (
 
         <div className={menuOpen ? 'navbar show-nav' : 'navbar'}>
-            <Link to="/"><img className="navbar-logo"src="./AR_logo_blue.png" alt=" le logo d'Alex" /></Link>
+            <Link to="/"><img className="navbar-logo"src={logo} alt=" le logo d'Alex" /></Link>
             <div  className="navbar-links">
                 {
                     routes.map(({label, route, id, classCss})=> (

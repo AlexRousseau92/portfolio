@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.scss';
+import img from '../../Assets/trouvtonbike.jpg';
 
 // Scss done
 const Works = () => ( 
@@ -12,7 +13,7 @@ const Works = () => (
                             <p className='works-card-description'>
                                  Lorem ipsum, dolor sit amet  nam enim sed nemo reprehenderit unde laudantium incidunt aspernatur quis voluptates. ! <br></br> C'est par ici ! 
                             </p>
-                            <img className="works-card-img" src="../trouvtonbike.jpg" alt="plusieurs vélos couchés au sol" />
+                            <img className="works-card-img" src={img} alt="plusieurs vélos couchés au sol" />
                         <div className="works-card-medias">
                                 <i className="fab fa-github-square"></i>
                                 <i className="fas fa-globe"></i>
