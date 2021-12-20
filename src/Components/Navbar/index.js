@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import './style.scss';
 import logo from '../../Assets/AR_logo_blue.png';
 
@@ -13,7 +12,7 @@ const Navbar = ({menuOpen, toggleMenu, routes}) => {
             <div  className="navbar-links">
                 {
                     routes.map(({label, route, id, classCss})=> (
-                        <NavLink key={id} onClick={toggleMenu} className={classCss}  to={route} >{label}</NavLink>
+                        <NavLink key={id} onClick={toggleMenu} className={classCss}  to={route} > {label} </NavLink>
                     ))
                 }
                 

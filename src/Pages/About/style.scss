@@ -7,30 +7,29 @@
     display: flex;
 
     &-left{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
+        width: 60%;
         margin-right: 1rem;
-
     }
     &-description{
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-end;
+        align-items: flex-end; /* */
         height: 100%;
-        text-align: right;
+        
     }
     &-title{
-        font-size: 2rem;
-        font-weight: bold;
+        font-size: 5rem;
+        // font-weight: bold;
         animation: titleAnimation 0.8s ease-out;
         color: vars.$primary-color;
     }
     &-text{
-        width: 80%;
+        width: 70%;
+        text-align: right;
         font-size: 1.5rem;
-        line-height: 2.3rem;
+        line-height: 2.5rem;
         animation: descriptionAnimation 0.8s ease-out;
         color: vars.$primary-color;
     }
@@ -44,20 +43,84 @@
     &-base{
         font-style: italic;
     }
+    &-skills{
+        margin: 1rem ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+    &-skill{
+            
+        margin: 0.5rem ;
+        height: 70px;
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 205px;
+        background: #f3f3f3;
+        box-shadow:  5px 5px 10px #dbdbdb,
+        -5px -5px 10px #ffffff;
+
+        & i {
+            font-size: 2.5rem;
+        }
+
+    }
+    &-skill:hover{
+        box-shadow: inset 5px 5px 10px #dbdbdb,
+            inset -5px -5px 10px #ffffff;
+    }
+    &-skill:nth-child(1) i {
+        color: #dd4b25;
+       
+    }
+    &-skill:nth-child(1) {
+        animation: skillsAnimation 0.8s ease-out;
+    }
+    &-skill:nth-child(2) i {
+        color: #2663ea;
+        transition: all 1.1s ease-out;
+    }
+    &-skill:nth-child(2) {
+        animation: skillsAnimation 1s ease-out;
+    }
+    &-skill:nth-child(3) i {
+        color: #efd81d;
+    }
+    &-skill:nth-child(3) {
+        animation: skillsAnimation 1.2s ease-out;
+    }
+    &-skill:nth-child(4) i {
+        color: #5ccfee;
+    }
+    &-skill:nth-child(4) {
+        animation: skillsAnimation 1.4s ease-out;
+    }
+    &-skill:nth-child(5) i {
+        color: #6fa45f;
+    }
+    &-skill:nth-child(5) {
+        animation: skillsAnimation 1.6s ease-out;
+    }
+    
     &-right{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        width: 50%;
+        width: 40%;
 
       
     }
     &-anchor{
-        width:40%;
+        width:300px;
         min-width: 250px;
-        max-width: 350px;
+        // max-width: 350px;
         animation: anchorAnimation 0.8s ease-out;
+        transition: all .5s ease-in-out; 
     }
     
     @keyframes descriptionAnimation {
@@ -90,13 +153,22 @@
             transform: translateX(0px);
         }
     }
+    @keyframes skillsAnimation {
+        from {
+            opacity: 0;
+            transform: translateY(200px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
 }
 
 @media screen and (max-width:767.98px) {
 
     .about{
         
-        height: 80vh;
 
         &-left{
             width: 100%;
@@ -106,9 +178,11 @@
             width: 100%;
             text-align: center;
             align-items: center;
+            justify-content: center;
         }
         &-text{
-            font-size: 1.3rem;
+            text-align: center;
+            font-size: 1.2rem;
             line-height: 2rem;
         }
         &-right{
@@ -116,6 +190,21 @@
         }
         &-anchor{
             display: none;
+        }
+        &-skills{
+            margin: 1rem 0 0 0;
+        }
+        &-skill{
+            
+            margin: 0.5rem;
+            height: 50px;
+            width: 50px;
+            border-radius: 205px;
+
+            & i {
+                font-size: 1.8rem;
+            }
+    
         }
     }
 
@@ -141,12 +230,27 @@
     }
 }
 @media screen and (max-width: 321px) {
-    
+    .about-description{
+        margin-top: 0.5rem;
+    }
     .about-title{
         font-size: 1.4rem;
+        margin-bottom: 0.5rem;
     }
     .about-text{
         line-height: 1.5rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .about-skills{
+        margin: 0;
+        
+    }
+    .about-skill{
+        width: 40px;
+        height: 40px;
+    }
+    .about-skill i {
+        font-size: 1.5rem;
     }
 }
