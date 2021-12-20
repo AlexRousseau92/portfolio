@@ -45,11 +45,10 @@
             flex-direction:column;
             justify-content: center;
             width:0;
-            height: auto;
+            height: 90vh;
             position:absolute;
             top:10vh;
             right:0;
-            bottom: 0;     
             background: vars.$primary-color;  
             transform: translateX(110%);
             transition: all .5s ease-in-out;
@@ -67,10 +66,11 @@
             color:vars.$alt-color;
         }
         &-link:hover{
-            padding-left:2rem;
+            // padding-left:2rem;
             letter-spacing: 5px;
         }
         &-logo{
+            margin: 5px 1rem;
             height: 60px;
 
         }
