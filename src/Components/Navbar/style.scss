@@ -15,11 +15,12 @@
         text-transform: uppercase;
         text-decoration:none;
         margin: 0 1rem;
+        color: vars.$primary-color;
     }
     &-logo{
-        height: 4.6rem;
+        height: 80px;
         margin-left: 1rem;
-        
+        color: red;
     }
     &-burger{
         display:none;

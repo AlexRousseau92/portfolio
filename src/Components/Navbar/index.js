@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import './style.scss';
 import logo from '../../Assets/AR_logo_blue.png';
 
-const Navbar = ({menuOpen, toggleMenu, routes}) => {
+const Navbar = ({menuOpen, toggleMenu, routes, }) => {
 
       return (
 

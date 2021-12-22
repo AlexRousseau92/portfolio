@@ -4,10 +4,12 @@ import './style.scss';
 import cv from '../../Assets/cv.pdf';
 
 
-const Footer = () => {
+const Footer = ({themeLight, toggleTheme}) => {
+    
     return (
-        <footer className="footer">
+        <footer className={themeLight ? "footer" : "footer"}>
             <div className="footer-media">
+                <i onClick={toggleTheme} className={themeLight ? "fas fa-sun" : "fas fa-moon"}></i>
                 <a href={cv} target='_blank' rel="noreferrer"><i className="far fa-file-pdf"></i></a>
                 <a href="https://github.com/AlexRousseau92" target='_blank' rel='noreferrer'><i className="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/alexandre-rousseau-a0628aaa/"target='_blank' rel='noreferrer' ><i className="fab fa-linkedin-in"></i></a>

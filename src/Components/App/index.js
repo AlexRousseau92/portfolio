@@ -8,15 +8,20 @@ import '../../Styles/index.scss';
 
 const App = () => {
 
-  const [burger, setBurger] = useState(false)
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
+  const [themeIsLight, setThemeIsLight] = useState(true)
 
-  const toggleBurger = () => {
-    setBurger(!burger)
+  const isOpen = () => {
+    setMenuIsOpen(!menuIsOpen)
+  }
+  const changeTheme = () => {
+    setThemeIsLight(!themeIsLight)
   }
 
   return (
-    <div className='App'>
-   <Navbar menuOpen={burger} toggleMenu={toggleBurger} routes={data}/>
+
+    <div className="App">
+   <Navbar menuOpen={menuIsOpen} toggleMenu={isOpen} routes={data} />
     <Routes>
    {
      data.map(({page, route, id})=> (
@@ -24,7 +29,7 @@ const App = () => {
      ))
    }
      </Routes>
-    <Footer />
+    <Footer themeLight={themeIsLight} toggleTheme={changeTheme}/>
     </div>
   )
 }
