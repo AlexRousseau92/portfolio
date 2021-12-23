@@ -1,8 +1,5 @@
 @use '../../Styles/vars';
-.dark .navbar-links{
-    // background-color: black;
-    
-}
+
 .dark .navbar-link{
     color: vars.$alt-color;
     transition: all .6s ease-in-out;
@@ -15,6 +12,7 @@
     background-color: vars.$alt-color;
     transition: all .6s ease-in-out;
 }
+
 
 .navbar{
     height: 10vh;
