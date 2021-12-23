@@ -1,16 +1,19 @@
 @use '../../Styles/vars';
 .dark .navbar-links{
-    background-color: black;
+    // background-color: black;
     
 }
 .dark .navbar-link{
     color: vars.$alt-color;
+    transition: all .6s ease-in-out;
 }
 .dark  .navbar-link:not(.active):after{
     background-color: vars.$alt-color;
+    transition: all .6s ease-in-out;
 }
 .dark .navbar-link:after{
     background-color: vars.$alt-color;
+    transition: all .6s ease-in-out;
 }
 
 .navbar{

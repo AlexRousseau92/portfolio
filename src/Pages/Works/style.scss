@@ -1,12 +1,15 @@
 @use '../../Styles/vars';
 .dark .works-card-title{
     color: vars.$alt-color;
+    transition: all .6s ease-in-out;
 }
 .dark .works-card-description{
     color: vars.$alt-color;
+    transition: all .6s ease-in-out;
 }
 .dark .works i {
     color: vars.$alt-color;
+    transition: all .6s ease-in-out;
 }
 .works{
     

@@ -1,6 +1,7 @@
 @use '../../Styles/vars';
 .dark  .home-description-text{
     color: vars.$alt-color;
+    transition: all .6s ease-in-out;
 }
 .home{
     display: flex;

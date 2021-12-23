@@ -1,9 +1,11 @@
 @use '../../Styles/vars';
 .dark .about-text {
     color: vars.$alt-color;
+    transition: all .6s ease-in-out;
 }
 .dark .about-title{
     color: vars.$alt-color;
+    transition: all .6s ease-in-out;
 }
 
 

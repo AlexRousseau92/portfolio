@@ -12,10 +12,12 @@ body{
 .App{
     height: 100vh;
     position: relative;
+    transition: all .9s ease-in-out;
     background-color: #f3f3f3;
 }
 
 .dark{
+    transition: all .6s ease-in-out;
     background-color: #000;
     color:  vars.$alternativ-color !important;
 }
