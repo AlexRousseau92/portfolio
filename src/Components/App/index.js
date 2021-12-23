@@ -20,7 +20,7 @@ const App = () => {
 
   return (
 
-    <div className={themeIsLight ? "App dark" : "App"}>
+    <div className={themeIsLight ? "App " : "App dark"}>
    <Navbar menuOpen={menuIsOpen} toggleMenu={isOpen} routes={data} themeLight={themeIsLight} />
     <Routes>
    {
