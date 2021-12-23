@@ -46,6 +46,7 @@ const Contact = () => {
                         <input
                         className="input"
                             type="text"
+                            required
                             id="name"
                             name="name"
                             onChange={(e) => setName(e.target.value)}
@@ -56,6 +57,7 @@ const Contact = () => {
                         <input
                         className="input"
                             type="text"
+                            required
                             id="phone"
                             name="phone"
                             onChange={(e) => setPhone(e.target.value)}

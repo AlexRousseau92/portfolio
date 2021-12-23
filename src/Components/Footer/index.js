@@ -7,7 +7,7 @@ import cv from '../../Assets/cv.pdf';
 const Footer = ({themeLight, toggleTheme}) => {
     
     return (
-        <footer className={themeLight ? "footer" : "footer"}>
+        <footer className="footer">
             <div className="footer-media">
                 <i onClick={toggleTheme} className={themeLight ? "fas fa-sun" : "fas fa-moon"}></i>
                 <a href={cv} target='_blank' rel="noreferrer"><i className="far fa-file-pdf"></i></a>

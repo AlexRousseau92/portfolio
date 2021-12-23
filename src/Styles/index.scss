@@ -7,10 +7,15 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: vars.$alt-color;
 
 }
 .App{
     height: 100vh;
     position: relative;
+    background-color: #f3f3f3;
+}
+
+.dark{
+    background-color: #000;
+    color:  vars.$alternativ-color !important;
 }

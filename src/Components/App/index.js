@@ -20,8 +20,8 @@ const App = () => {
 
   return (
 
-    <div className="App">
-   <Navbar menuOpen={menuIsOpen} toggleMenu={isOpen} routes={data} />
+    <div className={themeIsLight ? "App dark" : "App"}>
+   <Navbar menuOpen={menuIsOpen} toggleMenu={isOpen} routes={data} themeLight={themeIsLight} />
     <Routes>
    {
      data.map(({page, route, id})=> (

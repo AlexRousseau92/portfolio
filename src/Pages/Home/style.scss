@@ -1,5 +1,7 @@
 @use '../../Styles/vars';
-
+.dark  .home-description-text{
+    color: vars.$alt-color;
+}
 .home{
     display: flex;
     height: 80vh;
@@ -91,5 +93,21 @@
       height: 280px;
       width: 140px;
       margin: 0;
+    }
+}
+
+@media screen and (max-width: 815.98px)  and (orientation : landscape){
+
+    .home{
+        height: 85vh;
+    }
+    .home-description-text{
+        font-size: 1.7rem;
+        line-height: 2.8rem;
+    }
+    .home-hero{
+        height: 300px;
+        width: 150px;
+        margin: 0;
     }
 }

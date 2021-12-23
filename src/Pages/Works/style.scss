@@ -1,5 +1,13 @@
 @use '../../Styles/vars';
-
+.dark .works-card-title{
+    color: vars.$alt-color;
+}
+.dark .works-card-description{
+    color: vars.$alt-color;
+}
+.dark .works i {
+    color: vars.$alt-color;
+}
 .works{
     
     display: flex;
