@@ -1,16 +1,41 @@
 @use '../../Styles/vars';
-.dark .works-card-title{
-    color: vars.$alt-color;
-    transition: all .6s ease-in-out;
+
+
+/* THEME */
+.works.dark{
+    background-color: vars.$back-color;
+    transition: all 0.5s ease-out;
 }
-.dark .works-card-description{
+.works-card-title.dark{
     color: vars.$alt-color;
-    transition: all .6s ease-in-out;
+    transition: all 0.5s ease-out;
 }
-.dark .works i {
+.works-card-description.dark{
     color: vars.$alt-color;
-    transition: all .6s ease-in-out;
+    transition: all 0.5s ease-out;
 }
+.works-card-medias.dark{
+    color: vars.$alt-color;
+    transition: all 0.8s ease-out;
+}
+.works.light{
+    background-color: vars.$alt-color;
+    transition: all 0.8s ease-out;
+}
+.works-card-title.light{
+    color: vars.$primary-color;
+    transition: all 0.8s ease-out;
+}
+.works-card-description.light{
+    color: vars.$primary-color;
+    transition: all 0.8s ease-out;
+}
+.works-card-medias.light{
+    color: vars.$primary-color;
+    transition: all 0.8s ease-out;
+}
+ /* END THEME */
+
 .works{
     
     display: flex;
@@ -30,15 +55,12 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            
-            
         }
 
         &-title{
             font-size: 2rem;
             font-weight: 600;
             text-transform: uppercase;
-            color: vars.$primary-color;
             padding: 1rem;
             margin-top: 1rem;
 
@@ -47,7 +69,6 @@
             font-size: 1.2rem;
             line-height: 2rem;
             text-align: center;
-            color: vars.$primary-color;
             padding: 1rem;
         }
         &-img{
@@ -57,7 +78,6 @@
            display: flex;
            
             & i {
-                color: vars.$primary-color;
                 font-size: 1.5rem;
                 margin: 1rem;
                 padding: 1rem;
@@ -91,7 +111,6 @@
         font-size: 1.2rem;
         line-height: 1.5rem;
         text-align: center;
-        color: vars.$primary-color;
     }
     .works-card-img{
         width: 230px;

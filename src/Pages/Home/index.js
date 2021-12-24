@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './style.scss';
 import logo from '../../Assets/Alex.png';
+import { ThemeContext } from '../../Components/Context';
+
 
 // SCSS ok
-const Home = () => (
+const Home = () => {
+    const {theme} = useContext(ThemeContext);
+return (
     
-    <section className="container home">
+    <section className={theme ? "container home light" : 'container home dark'}>
         <div className="home-left">
             <div className="home-description">
-                <p className='home-description-text'>I'm <br></br><span className='home-description-span'>Alexandre</span>  <br></br> <span className='home-description-span'>Rousseau</span> <br></br> a French <br></br> Full Stack  <br></br> Dev <br></br> Junior </p>
+                {theme}
+                <p className={theme ? 'home-description-text light' : 'home-description-text dark'}>I'm <br></br><span className='home-description-span'>Alexandre</span>  <br></br> <span className='home-description-span'>Rousseau</span> <br></br> a French <br></br> Full Stack  <br></br> Dev <br></br> Junior </p>
             </div>
         </div>
         <div className="home-right">
@@ -16,5 +21,5 @@ const Home = () => (
         </div>
     </section>
 );
-
+}
 export default Home;

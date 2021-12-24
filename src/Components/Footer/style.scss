@@ -1,9 +1,9 @@
 @use '../../Styles/vars';
 
 .footer{
-  position: absolute;
+  // position: absolute;
   height: 10vh;
-  bottom: 0;
+  // bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -13,14 +13,27 @@
     cursor: pointer;
     font-size: 2rem;
     margin: 0 1.5rem;
-    color: vars.$primary-color;
   }
+
   
 }
-.dark{
-  & i{
-    color: vars.$alt-color;
-  }
+
+.footer.dark{
+  transition: all 0.5s ease-out;
+  background-color:#1f1f1f;
+}
+.footer-medias.dark{
+  transition: all 0.5s ease-out;
+  color: vars.$alt-color ;
+}
+
+.footer.light{
+  transition: all 0.8s ease-out;
+  background-color: vars.$alt-color;
+}
+.footer-medias.light {
+  transition: all 0.8s ease-out;
+  color: vars.$primary-color;
 }
 
 @media screen and (max-width:767.98px) {
@@ -28,9 +41,10 @@
     margin: 0 1rem;
   }
 }
-@media screen and (max-width: 815.98px)  and (orientation : landscape){
-  .footer{
-    display: none;
-  }
+// @media screen and (max-width: 815.98px)  and (orientation : landscape){
+//   .footer{
+//     display: none;
+//   }
   
-}
+// }
+

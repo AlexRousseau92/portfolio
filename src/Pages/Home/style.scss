@@ -1,13 +1,29 @@
 @use '../../Styles/vars';
-.dark  .home-description-text{
-    color: vars.$alt-color;
-    transition: all .6s ease-in-out;
+
+
+.home.light{
+    transition: all 0.8s ease-out;
+    background-color: vars.$alt-color;
 }
+
+.home-description-text.light{
+    transition: all 0.8s ease-out;
+    color: vars.$primary-color
+}
+
+.home.dark{
+    transition: all 0.5s ease-out;
+    background-color: #121212;
+}
+.home-description-text.dark {
+    transition: all 0.5s ease-out;
+    color: vars.$alt-color;
+}
+
 .home{
     display: flex;
     height: 80vh;
     width: 100%;
-
     &-left{
         height: auto;
         width: 50%;
@@ -26,7 +42,6 @@
 
         &-text{
             line-height: 5.5rem;
-            color: vars.$primary-color;
             text-align: right;
             font-size: 3.5rem;
         }
@@ -97,18 +112,18 @@
     }
 }
 
-@media screen and (max-width: 815.98px)  and (orientation : landscape){
+// @media screen and (max-width: 815.98px)  and (orientation : landscape){
 
-    .home{
-        height: 85vh;
-    }
-    .home-description-text{
-        font-size: 1.7rem;
-        line-height: 2.8rem;
-    }
-    .home-hero{
-        height: 300px;
-        width: 150px;
-        margin: 0;
-    }
-}
+//     .home{
+//         height: 85vh;
+//     }
+//     .home-description-text{
+//         font-size: 1.7rem;
+//         line-height: 2.8rem;
+//     }
+//     .home-hero{
+//         height: 300px;
+//         width: 150px;
+//         margin: 0;
+//     }
+// }

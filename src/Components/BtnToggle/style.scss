@@ -1,0 +1,46 @@
+@use '../../Styles/vars';
+
+.btn-toggle{
+    position: fixed;
+    bottom: calc(5vh - 24px);
+    left: 2rem;
+    width: 3rem;
+    height: 3rem;
+    color: vars.$alt-color;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+.btn-toggle i {
+    font-size: 2.5rem;
+}
+
+.btn-toggle.light{
+    transition: all 0.5s ease-out;
+    background-color: vars.$alt-color;
+    color: vars.$primary-color;
+}
+.btn-toggle.dark{
+    transition: all 0.5s ease-out;
+    background-color: vars.$top-color;
+    color: vars.$alt-color;
+}
+
+@media screen and (max-width: 767.98px) {
+    .btn-toggle{
+        height: 2.2rem;
+        width: 2.2rem;
+        top : calc(5vh - 17px);
+        left: calc(50vw - 17px);
+        border: none;
+    }
+    .btn-toggle i {
+        font-size: 2rem;
+    }
+    .btn-toggle.dark{
+        background-color: vars.$top-color;
+    }
+}

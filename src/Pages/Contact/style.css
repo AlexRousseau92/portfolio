@@ -10,6 +10,8 @@
       margin-top: 10px;
       text-transform: uppercase;
       animation: title-formAnimation 1s ease-out;
+      color: #1a1d38;
+      
   }
   @keyframes title-formAnimation {
       from {
@@ -38,7 +40,7 @@
           opacity: 1;
           transform: translateX(0px);
       }
-    }
+}
   .input{
       border: 1px solid #1a1d38;
       margin-top: 30px;
