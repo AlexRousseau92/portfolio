@@ -77,39 +77,39 @@
         background-color: vars.$alt-color;
     }
     .dark .navbar-bar::before{
-        transition: all 0.5s ease-out;
+        // transition: all 0.5s ease-out;
         background-color: vars.$alt-color;
     }
     .dark .navbar-bar::after{
-        transition: all 0.5s ease-out;
+        // transition: all 0.5s ease-out;
         background-color: vars.$alt-color;
     }
     .dark .navbar-links{
-        transition: all 0.5s ease-out;
+        // transition: all 0.5s ease-out;
         background-color: vars.$back-color;
     }
     .dark .navbar-link{
-        transition: all 0.5s ease-out;
+        // transition: all 0.5s ease-out;
         color: vars.$alt-color;
     }
     .light .navbar-bar{
-        transition: all 0.8s ease-out;
+        // transition: all 0.8s ease-out;
         background-color: vars.$primary-color;
     }
     .light .navbar-bar::before{
-        transition: all 0.8s ease-out;
+        // transition: all 0.8s ease-out;
         background-color: vars.$primary-color;
     }
     .light .navbar-bar::after{
-        transition: all 0.8s ease-out;
+        // transition: all 0.8s ease-out;
         background-color: vars.$primary-color;
     }
     .light .navbar-links{
-        transition: all 0.8s ease-out;
+        // transition: all 0.8s ease-out;
         background-color: vars.$primary-color;
     }
     .light .navbar-link{
-        transition: all 0.8s ease-out;
+        // transition: all 0.8s ease-out;
         color: vars.$alt-color;
     }
     .navbar{
