@@ -6,9 +6,9 @@ const BtnToggle = () => {
     const {toggleTheme, theme} = useContext(ThemeContext)
 
     return (
-        <div onClick={toggleTheme}className={theme ? 'btn-toggle light' : 'btn-toggle dark'}>
+        <button onClick={toggleTheme}className={theme ? 'btn-toggle light' : 'btn-toggle dark'}>
            <i className={theme ? "fas fa-moon" : "fas fa-sun"}></i>
-        </div>
+        </button>
     );
 };
 
