@@ -1,0 +1,204 @@
+@use '../../Styles/vars';
+
+.contact.light{
+    background-color: vars.$alt-color;
+    transition: all 0.8s ease-out;
+}
+.contact.dark{
+    background-color: vars.$back-color;
+    transition: all 0.5s ease-out;
+}
+.contact-title.light{
+    color: vars.$primary-color;
+}
+.contact-title.dark{
+    color: vars.$alt-color;
+}
+.contact-form.light{
+color: vars.$primary-color;
+}
+.contact-form.dark{
+    color: vars.$alt-color;
+}
+.contact-button.light{
+    background-color: vars.$primary-color;
+    color: vars.$alt-color;
+}
+.contact-button.dark{
+    background-color: vars.$alt-color;
+    color: vars.$primary-color;
+}
+
+
+.contact{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-title{
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 1rem;
+        text-transform: uppercase;
+        // align-self: flex-start;
+        animation: title-formAnimation 0.7s ease-out;
+    }
+    &-form{
+        width: 90%;
+        height: 75%;
+        margin: 0.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+
+    }
+    &-label{
+        height: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        margin: 0.5rem;
+        animation: input-formAnimation 0.7s ease-out;
+    }
+ 
+     &-message{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         margin: 1rem;
+         width: 50%;
+         animation: message-formAnimation 0.7s ease-out;
+          
+     }
+     &-button{
+        width: 5rem;
+        height: 2.5rem;
+        margin: 1rem;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0.5rem;
+        animation: button-formAnimation 0.7s ease-out;
+        
+     }
+    
+}
+
+input{
+   height: 2rem;
+   width: 50%;
+  
+}
+input:focus{
+    font-size: 1.2rem;
+    border: 2px solid vars.$primary-color;
+    
+}
+textarea{
+    width: 100%;
+    margin-top: 1rem;
+    height: 10rem;
+    resize: none;
+    
+}
+textarea:focus{
+    font-size: 1.4rem;
+}
+
+
+.alert-message{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1rem;
+    
+}
+
+
+@keyframes title-formAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes button-formAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes message-formAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes input-formAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+// @media screen and (max-width:767.98px) {
+
+//     .contact-label{
+//         width: 90%;
+//         flex-direction: column;
+//         align-items: center;
+//         margin: 1rem;
+//     }
+//     input{
+//         margin: 1rem;
+//     }
+//     .contact-title{ 
+//         font-size: 1.5rem;
+        
+//     }
+//     .contact-form{
+        
+//         margin: 0;
+//         height: 90%;
+//         width: 100%;
+//     }
+//     .contact-card{
+//         height: 100%;
+//         width: 90%;
+//         box-shadow: none;
+//     }
+//     input:focus{
+//         font-size: 1.2rem;
+//         border: 2px solid vars.$primary-color;
+//     }
+//     textarea:focus{
+//        font-size: 1rem;
+      
+//     }
+//     .alert-message{
+//         font-size: 0.9rem;
+//     }
+
+// }

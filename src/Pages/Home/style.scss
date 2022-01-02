@@ -13,7 +13,7 @@
 
 .home.dark{
     transition: all 0.5s ease-out;
-    background-color: #121212;
+    background-color: vars.$back-color;
 }
 .home-description-text.dark {
     transition: all 0.5s ease-out;
@@ -112,18 +112,18 @@
     }
 }
 
-// @media screen and (max-width: 815.98px)  and (orientation : landscape){
+@media screen and (max-width: 815.98px)  and (orientation : landscape){
 
-//     .home{
-//         height: 85vh;
-//     }
-//     .home-description-text{
-//         font-size: 1.7rem;
-//         line-height: 2.8rem;
-//     }
-//     .home-hero{
-//         height: 300px;
-//         width: 150px;
-//         margin: 0;
-//     }
-// }
+    .home{
+        height: 85vh;
+    }
+    .home-description-text{
+        font-size: 1.7rem;
+        line-height: 2.8rem;
+    }
+    .home-hero{
+        height: 300px;
+        width: 150px;
+        margin: 0;
+    }
+}

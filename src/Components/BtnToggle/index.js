@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import './style.scss';
 import { ThemeContext } from '../Context';
+
 const BtnToggle = () => {
 
     const {toggleTheme, theme} = useContext(ThemeContext)

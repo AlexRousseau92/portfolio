@@ -7,6 +7,7 @@ import { ThemeContext } from '../../Components/Context';
 // SCSS ok
 const Home = () => {
     const {theme} = useContext(ThemeContext);
+    console.log(theme)
 return (
     
     <section className={theme ? "container home light" : 'container home dark'}>

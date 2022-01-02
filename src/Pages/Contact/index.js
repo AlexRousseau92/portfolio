@@ -1,102 +1,149 @@
-import React, { useState } from "react";
-import './style.css';
-import{ init } from 'emailjs-com';
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "../../Components/Context";
+import './style.scss';
+import { init } from 'emailjs-com';
 import emailjs from 'emailjs-com';
 init("user_x49cGtlaIEAlVj75cUqXP");
+
+
 const Contact = () => {
 
+    const {theme} = useContext(ThemeContext)
+
     const [name, setName] = useState("");
+    const [company, setCompany] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const failMessage = () => {
+        const formMessage = document.querySelector('.alert-message');
+        formMessage.textContent = 'Please provide required information *';
+        formMessage.style.color = '#ff0000';
+    };
 
-        sendFeedback("template_ehvxpds", {
-            name,
-            phone,
-            email,
-            message,
-        });
+    const successMessage = () => {
+        const formMessage = document.querySelector('.alert-message');
+        formMessage.textContent = 'Your message has been sent !';
+        formMessage.style.color = '#008000';
     };
 
     const sendFeedback = (templateId, variables) => {
 
         emailjs
             .send("service_csilb7n", templateId, variables)
+
             .then((res) => {
-                console.log('success !');
+                successMessage();
                 setName("");
+                setCompany("");
                 setPhone("");
                 setEmail("");
                 setMessage("");
             })
             .catch(
-                (err) =>
-                    document.querySelector('.form-message').innerHTML =
-                    "Une erreur s'est produite, veuillez réessayer.")
+                (err) => {
+                    const formMessage = document.querySelector('.form-message');
+                    formMessage.innerHTML = "Une erreur s'est produite, veuillez réessayer";
+                })
+    };
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        if (name && email && message) {
+
+            sendFeedback("template_ehvxpds", {
+                name,
+                company,
+                phone,
+                email,
+                message,
+            });
+
+        } else {
+            failMessage();
+        }
+
     };
 
     return (
-            <section className="container container-contact">
-                    <h2 className="title-form">Contact me</h2>
-                    <form className="contact-form">
-                    <div className="form-content">
-                        <input
-                        className="input"
-                            type="text"
-                            required
-                            id="name"
-                            name="name"
-                            onChange={(e) => setName(e.target.value)}
-                            placeholder="Name"
-                            value={name}
-                            autoComplete="off" />
-                        <div className="ligne"></div>
-                        <input
-                        className="input"
-                            type="text"
-                            required
-                            id="phone"
-                            name="phone"
-                            onChange={(e) => setPhone(e.target.value)}
-                            placeholder="Phone"
-                            value={phone} />
-                            <div className="ligne"></div>
-                        <div className="email-content">
-                            {/* <label id="not-mail">Email non valide</label> */}
-                            <input
-                            className="input"
-                                type="mail"
-                                id="email"
-                                name="email"
-                                required="required"
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Email *"
-                                value={email}
-                                autoComplete="off" />
-                                <div className="ligne"></div>
-                        </div>
-                        <textarea
-                        className="input input-textarea"
-                            id="message"
-                            name="message"
-                            onChange={(e) => setMessage(e.target.value)}
-                            placeholder="Message *"
-                            value={message} />
-                            <div className="ligne"></div>
-                    </div>
+        <section className={theme ? "container contact light" : "container contact dark"}>
+            <h2 className={theme ? "contact-title light" : "contact-title dark"}>Contact me</h2>
+            <form  onSubmit={sendEmail} className={ theme ? "contact-form light" : "contact-form dark"}>
+            <div className="alert-message"></div>
+                <label htmlFor="name" className="contact-label label-one">
+                    Name *
                     <input
-                        className="button"
-                        type="button"
-                        value="Envoyer"
-                        onClick={handleSubmit} />
-                        <div className="ligne--button"></div>
-                    <div className="form-message"></div>
-                </form>
-            </section>
-    );
+                        type="text"
+                        name="name"
+                        id="name"
+                        onChange={(event) => {
+                            setName(event.target.value);
+                        }}
+                        value={name}
+                    />
+                </label>
+                <label htmlFor="company" className="contact-label label-two ">
+                    Company
+                    <input
+                        type="text"
+                        name="company"
+                        id="company"
+                        onChange={(event) => {
+                            setCompany(event.target.value);
+                        }}
+                        value={company}
+                    />
+                </label>
+
+                <label htmlFor="phone" className="contact-label 3">
+                    Phone
+                    <input
+                        type="text"
+                        name="phone"
+                        id="phone"
+                        onChange={(event) => {
+                            setPhone(event.target.value);
+                        }}
+                        value={phone}
+                    />
+                </label>
+
+                <label htmlFor="email"className="contact-label 4">
+                    Email *
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        onChange={(event) => {
+                            setEmail(event.target.value);
+                        }}
+                        value={email}
+                    />
+                </label>
+
+                <label htmlFor="message" className="contact-message">
+                    Your message *
+                    <textarea
+                        name="message"
+                        id="message"
+                        onChange={(event) => {
+                            setMessage(event.target.value);
+                        }}
+                        value={message}
+                    />
+                </label>
+
+                
+
+                <button type="submit"  className={theme ? "contact-button light" : "contact-button dark"}>Send</button>
+
+
+            </form>
+        </section >
+    )
+
 };
 
 export default Contact;

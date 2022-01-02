@@ -4,6 +4,7 @@ import './style.scss';
 import logoBlue from '../../Assets/AR_logo_blue.png';
 import logoWhite from '../../Assets/AR_logo_white.png';
 import { ThemeContext } from "../Context";
+
 const Navbar = ({menuOpen, toggleMenu, routes }) => {
 
     const light = <Link to="/"><img className="navbar-logo"src={logoBlue} alt=" le logo d'Alex" /></Link>;
