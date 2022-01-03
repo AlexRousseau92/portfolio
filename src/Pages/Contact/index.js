@@ -70,8 +70,8 @@ const Contact = () => {
     return (
         <section className={theme ? "container contact light" : "container contact dark"}>
             <h2 className={theme ? "contact-title light" : "contact-title dark"}>Contact me</h2>
-            <form  onSubmit={sendEmail} className={ theme ? "contact-form light" : "contact-form dark"}>
-            <div className="alert-message"></div>
+            <form onSubmit={sendEmail} className={theme ? "contact-form light" : "contact-form dark"}>
+                <div className="alert-message"></div>
                 <label htmlFor="name" className="contact-label label-one">
                     Name *
                     <input
@@ -96,7 +96,6 @@ const Contact = () => {
                         value={company}
                     />
                 </label>
-
                 <label htmlFor="phone" className="contact-label 3">
                     Phone
                     <input
@@ -109,8 +108,7 @@ const Contact = () => {
                         value={phone}
                     />
                 </label>
-
-                <label htmlFor="email"className="contact-label 4">
+                <label htmlFor="email" className="contact-label 4">
                     Email *
                     <input
                         type="email"
@@ -122,7 +120,6 @@ const Contact = () => {
                         value={email}
                     />
                 </label>
-
                 <label htmlFor="message" className="contact-message">
                     Your message *
                     <textarea
@@ -134,12 +131,7 @@ const Contact = () => {
                         value={message}
                     />
                 </label>
-
-                
-
-                <button type="submit"  className={theme ? "contact-button light" : "contact-button dark"}>Send</button>
-
-
+                <button type="submit" className={theme ? "contact-button light" : "contact-button dark"}>Send</button>
             </form>
         </section >
     )

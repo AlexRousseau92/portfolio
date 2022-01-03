@@ -1,15 +1,14 @@
 import React, {useContext} from 'react';
-import './style.scss';
-import logo from '../../Assets/Alex.png';
 import { ThemeContext } from '../../Components/Context';
+import logo from '../../Assets/Alex.png';
+import './style.scss';
 
 
-// SCSS ok
 const Home = () => {
+
     const {theme} = useContext(ThemeContext);
-    console.log(theme)
+
 return (
-    
     <section className={theme ? "container home light" : 'container home dark'}>
         <div className="home-left">
             <div className="home-description">
@@ -18,7 +17,7 @@ return (
             </div>
         </div>
         <div className="home-right">
-            <img className="home-hero" src={logo} alt="img d'Alex moitiée du visage"></img>
+            <img className="home-hero" src={logo} alt="Alex's half face"></img>
         </div>
     </section>
 );

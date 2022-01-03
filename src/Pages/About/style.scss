@@ -24,6 +24,13 @@
     transition: all 0.8s ease-out;
     color: vars.$primary-color;
 }
+.about-anchor.light{
+    color: vars.$primary-color;
+}
+.about-anchor.dark{
+    color: vars.$alt-color;
+}
+
 
 .about {
     height: 80vh;

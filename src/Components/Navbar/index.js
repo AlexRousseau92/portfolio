@@ -7,30 +7,29 @@ import { ThemeContext } from "../Context";
 
 const Navbar = ({menuOpen, toggleMenu, routes }) => {
 
-    const light = <Link to="/"><img className="navbar-logo"src={logoBlue} alt=" le logo d'Alex" /></Link>;
-    const dark = <Link to="/"><img className="navbar-logo"src={logoWhite} alt=" le logo d'Alex" /></Link>;
+    const light = <Link to="/"><img className="navbar-logo"src={logoBlue} alt=" Alex's blue logo" /></Link>;
+    const dark = <Link to="/"><img className="navbar-logo"src={logoWhite} alt=" Alex's white logo" /></Link>;
     const {theme} = useContext(ThemeContext)
 
       return (
+          <header className={theme ? 'header light' : 'header dark'}>
+              <div className={menuOpen ? 'navbar show-nav' : 'navbar '}>
 
-        <header className={theme ? 'header light' : 'header dark'}>
-        <div className={menuOpen ? 'navbar show-nav' : 'navbar '}>
+                  {theme ? light : dark}
 
-            {theme ? light : dark}
+                  <div className={theme ? "navbar-links light" : "navbar-links dark"}>
+                      {
+                          routes.map(({ label, route, id, classCss }) => (
+                              <NavLink key={id} onClick={toggleMenu} className={classCss} to={route} > {label} </NavLink>
+                          ))
+                      }
 
-            <div  className={theme ? "navbar-links light" : "navbar-links dark"}>
-                {
-                    routes.map(({label, route, id, classCss})=> (
-                        <NavLink key={id} onClick={toggleMenu} className={classCss}  to={route} > {label} </NavLink>
-                    ))
-                }
-                
-            </div>
-            <button className="navbar-burger" onClick={toggleMenu}>
-                <span className="navbar-bar"></span>
-             </button>
-        </div>
-        </header>
+                  </div>
+                  <button className="navbar-burger" onClick={toggleMenu}>
+                      <span className="navbar-bar"></span>
+                  </button>
+              </div>
+          </header>
     );
 }
 

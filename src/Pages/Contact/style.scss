@@ -42,7 +42,7 @@ color: vars.$primary-color;
         font-weight: 500;
         margin: 1rem;
         text-transform: uppercase;
-        // align-self: flex-start;
+        // align-self: flex-end;
         animation: title-formAnimation 0.7s ease-out;
     }
     &-form{
@@ -88,6 +88,7 @@ color: vars.$primary-color;
         padding: 0.5rem;
         animation: button-formAnimation 0.7s ease-out;
         
+        
      }
     
 }
@@ -100,6 +101,7 @@ input{
 input:focus{
     font-size: 1.2rem;
     border: 2px solid vars.$primary-color;
+
     
 }
 textarea{
