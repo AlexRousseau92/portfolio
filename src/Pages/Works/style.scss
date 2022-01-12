@@ -1,53 +1,62 @@
 @use '../../Styles/vars';
 
+.works.light::-webkit-scrollbar-track
+{
+	background-color: vars.$alt-color;
+}
 
-/* THEME */
+.works.light::-webkit-scrollbar
+{
+	width: 4px;
+	background-color: vars.$alt-color;
+}
+
+.works.light::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: vars.$primary-color;
+}
+.works.dark::-webkit-scrollbar-track
+{
+	background-color: vars.$back-color;
+}
+
+.works.dark::-webkit-scrollbar
+{
+	width: 4px;
+	background-color: vars.$top-color;
+}
+
+.works.dark::-webkit-scrollbar-thumb
+{   
+	border-radius: 10px;
+	background-color: vars.$alt-color;
+}
+
 .works.dark{
     background-color: vars.$back-color;
-    transition: all 0.5s ease-out;
-}
-.works-card-title.dark{
     color: vars.$alt-color;
-    transition: all 0.5s ease-out;
 }
-.works-card-description.dark{
-    color: vars.$alt-color;
-    transition: all 0.5s ease-out;
-}
-.works-card-medias.dark{
-    color: vars.$alt-color;
-    transition: all 0.8s ease-out;
-}
+
 .works.light{
     background-color: vars.$alt-color;
     transition: all 0.8s ease-out;
-}
-.works-card-title.light{
     color: vars.$primary-color;
-    transition: all 0.8s ease-out;
 }
-.works-card-description.light{
-    color: vars.$primary-color;
-    transition: all 0.8s ease-out;
-}
-.works-card-medias.light{
-    color: vars.$primary-color;
-    transition: all 0.8s ease-out;
-}
- /* END THEME */
 
 .works{
-    
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 83vh;
+    overflow-y: auto;
 
     &-card{
         
         display: flex;
-        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-        width: 75%;
+        flex-wrap: wrap;
+        width: 60%;
         animation: cardAnimation 0.8s ease-out;
         &-left{
             width: 100%;
@@ -99,10 +108,10 @@
     }
 }
 
-
-
 @media screen and (max-width:767.98px) {
-
+    .works{
+        height: 80vh;
+    }
     .works-card-title{
         font-size: 1.7rem;
         padding: 0.5rem;
@@ -141,6 +150,7 @@
     }
    
 }
+
 
     
    

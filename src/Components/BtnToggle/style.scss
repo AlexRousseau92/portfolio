@@ -22,7 +22,7 @@
     color: vars.$primary-color;
 }
 .btn-toggle.dark{
-    transition: all .4s ease-out;
+    // transition: all .4s ease-out;
     background-color: transparent;
     color: vars.$alt-color;
 }
@@ -36,15 +36,13 @@
         left: calc(50vw - 20px);
         border: none;
     }
-    // .btn-toggle i {
-    //     font-size: 1.rem;
-    // }
     .btn-toggle.dark{
         background-color: vars.$top-color;
     }
 }
-// @media screen and (max-width: 815.98px)  and (orientation : landscape){
-//     .btn-toggle{
-//       display: none;
-//     }
+// @media screen and (max-width: 896px)  and (orientation : landscape){
+//    .btn-toggle{
+//        top: calc(8vh - 16px);
+//        left: 7rem;
+//    }
 // }

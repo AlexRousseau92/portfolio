@@ -1,0 +1,43 @@
+@use '../../Styles/vars';
+.notFound.light{
+    color: vars.$primary-color;
+    background-color: vars.$alt-color;
+    transition: all 0.8s ease-out;
+}
+.notFound.dark{
+    color: vars.$alt-color;
+    background-color: vars.$back-color;
+    transition: all 0.5s ease-out;
+}
+
+.notFound{
+    height: 83vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+   &-title{
+       font-size: 8rem;
+       text-transform: uppercase;
+
+       &-two{
+           font-size: 4rem;
+           text-transform: uppercase;
+       }
+   }
+}
+
+@media screen and (max-width:767.98px) {
+    .notFound{
+        height: 80vh;
+
+        &-title{
+            font-size: 6rem;
+
+            &-two{
+                font-size: 2rem;
+            }
+        }
+    }
+}

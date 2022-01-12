@@ -69,8 +69,8 @@ const Contact = () => {
 
     return (
         <section className={theme ? "container contact light" : "container contact dark"}>
+            <form onSubmit={sendEmail} className= "contact-form ">
             <h2 className={theme ? "contact-title light" : "contact-title dark"}>Contact me</h2>
-            <form onSubmit={sendEmail} className={theme ? "contact-form light" : "contact-form dark"}>
                 <div className="alert-message"></div>
                 <label htmlFor="name" className="contact-label label-one">
                     Name *

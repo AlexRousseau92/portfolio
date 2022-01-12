@@ -1,47 +1,58 @@
 @use '../../Styles/vars';
 
-.footer{
-  // position: absolute;
-  height: 10vh;
-  // bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-  align-items: center;
-
-  & i{
-    cursor: pointer;
-    font-size: 2rem;
-    margin: 0 1.5rem;
-  }
-
-  
-}
-
 .footer.dark{
   transition: all 0.5s ease-out;
-  background-color:#1f1f1f;
-}
-.footer-medias.dark{
-  transition: all 0.5s ease-out;
-  color: vars.$alt-color ;
+  background-color: vars.$top-color;
+  color: vars.$alt-color;
 }
 
 .footer.light{
   transition: all 0.8s ease-out;
   background-color: vars.$alt-color;
-}
-.footer-medias.light {
-  transition: all 0.8s ease-out;
   color: vars.$primary-color;
 }
+.footer{
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
+  align-items: center;
+  
+  & i{
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 0 1.5rem;
+  }
+  &-medias{
+    margin: 0.5rem;
+  }
+  &-copyright{
+    font-size: 0.6rem;
+    margin: 0.5rem;
+   
+  }
+  
+}
 @media screen and (max-width:767.98px) {
   .footer{
     justify-content: center;
+    height: 10vh;
+
+    &-copyright{
+      margin: 0;
+      font-size: 0.5rem;
+    }
   }
   .footer i {
     margin: 0 1.5rem;
   }
 }
+
+// @media screen and (max-width: 896px)  and (orientation : landscape){
+
+//   .footer{
+//     display: none;
+//   }
+// }

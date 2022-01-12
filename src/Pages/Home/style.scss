@@ -4,25 +4,17 @@
 .home.light{
     transition: all 0.8s ease-out;
     background-color: vars.$alt-color;
+    color: vars.$primary-color;
 }
-
-.home-description-text.light{
-    transition: all 0.8s ease-out;
-    color: vars.$primary-color
-}
-
 .home.dark{
     transition: all 0.5s ease-out;
     background-color: vars.$back-color;
-}
-.home-description-text.dark {
-    transition: all 0.5s ease-out;
     color: vars.$alt-color;
 }
 
 .home{
     display: flex;
-    height: 80vh;
+    height: 83vh;
     width: 100%;
     &-left{
         height: auto;
@@ -86,7 +78,9 @@
 }
 
 @media screen and (max-width:767.98px) {
-   
+   .home{
+    height: 80vh;
+   }
     .home-description-text{
         font-size: 1.7rem;
         line-height: 2.8rem;
@@ -112,18 +106,17 @@
     }
 }
 
-@media screen and (max-width: 815.98px)  and (orientation : landscape){
-
-    .home{
-        height: 85vh;
-    }
-    .home-description-text{
-        font-size: 1.7rem;
-        line-height: 2.8rem;
-    }
-    .home-hero{
-        height: 300px;
-        width: 150px;
-        margin: 0;
-    }
-}
+// @media screen and (max-width: 896px)  and (orientation : landscape){
+//     .home{
+//         height: 84vh;
+//     }
+//     .home-description-text{
+//         font-size: 1.7rem;
+//         line-height: 2.8rem;
+//     }
+//     .home-hero{
+//         height: 300px;
+//         width: 150px;
+//         margin: 0;
+//     }
+// }

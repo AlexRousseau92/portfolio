@@ -1,39 +1,28 @@
 @use '../../Styles/vars';
 
+
+.about-ligne.light{
+    background-color: vars.$primary-color;
+    transition: all 0.8s ease-out;
+}
+.about-ligne.dark{
+    background-color: vars.$alt-color;
+    transition: all 0.5s ease-out;
+}
+
 .about.dark{
     transition: all 0.5s ease-out;
     background-color: vars.$back-color;
-}
-.about-title.dark  {
-    transition: all 0.5s ease-out;
-    color: vars.$alt-color;
-}
-.about-text.dark{
-    transition: all 0.5s ease-out;
     color: vars.$alt-color;
 }
 .about.light{
     transition: all 0.8s ease-out;
     background-color: vars.$alt-color;
-}
-.about-title.light{
-    transition: all 0.8s ease-out;
     color: vars.$primary-color;
 }
-.about-text.light{
-    transition: all 0.8s ease-out;
-    color: vars.$primary-color;
-}
-.about-anchor.light{
-    color: vars.$primary-color;
-}
-.about-anchor.dark{
-    color: vars.$alt-color;
-}
-
 
 .about {
-    height: 80vh;
+    height: 83vh;
     width: 100%;
     display: flex;
     
@@ -41,7 +30,7 @@
         width: 50%;
         margin-right: 1rem;
     }
-    &-description{
+    &-description{  
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -53,6 +42,14 @@
         font-weight: 500;
         margin: 1rem;
         animation: titleAnimation 0.8s ease-out;
+    }
+    &-ligne{
+        position: relative;
+        top: -5px;
+        right: 0;
+        height: 0.3rem;
+        width: 4.5rem;
+        animation: ligneAnimation 0.8s ease-out;
     }
     &-text{
         width: 75%;
@@ -95,13 +92,22 @@
     &-anchor{
         height: 570px;
         animation: anchorAnimation 0.8s ease-out;
-        transition: all .5s ease-in-out;
     }
     
     @keyframes descriptionAnimation {
         from {
             opacity: 0;
             transform: translateX(-200px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    @keyframes ligneAnimation {
+        from {
+            opacity: 0;
+            transform: translateX(-600px);
         }
         to {
             opacity: 1;
@@ -143,7 +149,7 @@
 @media screen and (max-width:767.98px)   {
 
     .about{
-        
+        height: 80vh;
 
         &-left{
             width: 100%;
@@ -160,9 +166,9 @@
         &-text{
             width: 75%;
             text-align: justify;
-            font-size: 1.1rem;
-            // line-height: 1.3rem;
-            margin: 1rem 0;
+            font-size: 1.2rem;
+            line-height: 1.3rem;
+            // margin:  0.5rem;
         }
         &-right{
             display: none;
@@ -193,14 +199,52 @@
             transform: translateX(0px);
         }
     }
+
+    .ligne{
+        display: none;
+    }
 }
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 375px) {
     
     .about-text{
-        line-height: 1rem;
-        font-size: 0.9rem;
+        line-height: 1.3rem;
+        font-size: 1rem;
         margin: 0.5rem 1rem;
         
     }
    
 }
+// @media screen and (max-width: 896px)  and (orientation : landscape){
+//     .ligne{
+//         display: none;
+//     }
+//     .about{
+//         height: 84vh;
+       
+//         &-left{
+//             width: 100%;
+//             margin: 0;
+//         }
+//         &-title{
+//             align-self: center;
+//             font-size: 2rem;
+//         }
+//         &-right{
+//             display: none;
+//         }
+//         &-description{
+//             width: 100%;
+//            align-items: center;
+//         }
+//         &-text{
+//             text-align: left;
+//             margin: 0,5rem;
+//             font-size: 16px;
+//             line-height: 1.1rem;
+//         }
+//         &-anchor{
+//             display: none;
+//         }
+//     }
+//  }
+ 
