@@ -1,14 +1,16 @@
 import React, { useState, useContext } from "react";
 import { ThemeContext } from "../../Components/Context";
-import './style.scss';
 import { init } from 'emailjs-com';
 import emailjs from 'emailjs-com';
+import './style.scss';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 init("user_x49cGtlaIEAlVj75cUqXP");
 
 
 const Contact = () => {
 
-    const {theme} = useContext(ThemeContext)
+    const { theme } = useContext(ThemeContext)
 
     const [name, setName] = useState("");
     const [company, setCompany] = useState("");
@@ -18,13 +20,13 @@ const Contact = () => {
 
     const failMessage = () => {
         const formMessage = document.querySelector('.alert-message');
-        formMessage.textContent = 'Please provide required information *';
+        formMessage.textContent = ' Veuillez remplir les champs obligatoires *';
         formMessage.style.color = '#ff0000';
     };
 
     const successMessage = () => {
         const formMessage = document.querySelector('.alert-message');
-        formMessage.textContent = 'Your message has been sent !';
+        formMessage.textContent = 'Votre message a été envoyé !';
         formMessage.style.color = '#008000';
     };
 
@@ -68,12 +70,12 @@ const Contact = () => {
     };
 
     return (
-        <section className={theme ? "container contact light" : "container contact dark"}>
-            <form onSubmit={sendEmail} className= "contact-form ">
-            <h2 className={theme ? "contact-title light" : "contact-title dark"}>Contact me</h2>
+        <section className={theme ? "contact light" : "contact dark"}>
+            <form onSubmit={sendEmail} className="contact-form ">
+                <h2 className="contact-title ">Contactez moi</h2>
                 <div className="alert-message"></div>
                 <label htmlFor="name" className="contact-label label-one">
-                    Name *
+                    Nom *
                     <input
                         type="text"
                         name="name"
@@ -85,7 +87,7 @@ const Contact = () => {
                     />
                 </label>
                 <label htmlFor="company" className="contact-label label-two ">
-                    Company
+                    Entreprise
                     <input
                         type="text"
                         name="company"
@@ -97,7 +99,7 @@ const Contact = () => {
                     />
                 </label>
                 <label htmlFor="phone" className="contact-label 3">
-                    Phone
+                    Téléphone
                     <input
                         type="text"
                         name="phone"
@@ -121,7 +123,7 @@ const Contact = () => {
                     />
                 </label>
                 <label htmlFor="message" className="contact-message">
-                    Your message *
+                    Votre message *
                     <textarea
                         name="message"
                         id="message"
@@ -131,7 +133,8 @@ const Contact = () => {
                         value={message}
                     />
                 </label>
-                <button type="submit" className={theme ? "contact-button light" : "contact-button dark"}>Send</button>
+                {/* <button type="submit" className="contact-button ">Envoyer</button> */}
+              <Button variant="contained" endIcon={<SendIcon />} type="submit" color="secondary">Envoyer</Button>
             </form>
         </section >
     )

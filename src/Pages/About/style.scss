@@ -55,12 +55,13 @@
         width: 75%;
         text-align: right;
         font-size: 1.2rem;
-        line-height: 1.3rem;
+        line-height: 1.4rem;
         animation: descriptionAnimation 0.8s ease-out;
         margin: 1rem ;
 
         &-hashtag{
             font-weight: 500;
+            color: vars.$alternativ-color;
         }
         &-link{
             font-weight: 600;
@@ -73,8 +74,9 @@
         
     }
     &-oclock{
-        font-weight: 500;
+        font-weight: 600;
         color: vars.$alternativ-color;
+        
     }
     &-base{
         font-style: italic;
@@ -90,7 +92,7 @@
       
     }
     &-anchor{
-        height: 570px;
+        width: 300px;
         animation: anchorAnimation 0.8s ease-out;
     }
     
@@ -176,6 +178,9 @@
         &-anchor{
             display: none;
         }
+        &-ligne{
+            display: none;
+        }
        
     }
 
@@ -204,47 +209,51 @@
         display: none;
     }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1120px) {
+    
+    .about-text{
+        line-height: 1.4rem;
+        font-size: 1.2rem;
+        margin: 0.5rem 1rem;
+        width: 75%;
+        
+    }
+   
+}
+@media screen and (max-width: 1000px) {
+    
+    .about-text{
+        line-height: 1.2rem;
+        font-size: 1.1rem;
+        margin: 0.5rem 1rem;
+        width: 80%;
+        
+    }
+   
+}
+@media screen and (max-width: 414px) {
     
     .about-text{
         line-height: 1.3rem;
+        font-size: 1.1rem;
+        margin: 0.5rem 1rem;
+        
+    }
+   
+}
+@media screen and (max-width: 375px) {
+    
+    .about-text{
+        line-height: 1.2rem;
         font-size: 1rem;
         margin: 0.5rem 1rem;
         
     }
    
 }
-// @media screen and (max-width: 896px)  and (orientation : landscape){
-//     .ligne{
-//         display: none;
-//     }
-//     .about{
-//         height: 84vh;
-       
-//         &-left{
-//             width: 100%;
-//             margin: 0;
-//         }
-//         &-title{
-//             align-self: center;
-//             font-size: 2rem;
-//         }
-//         &-right{
-//             display: none;
-//         }
-//         &-description{
-//             width: 100%;
-//            align-items: center;
-//         }
-//         &-text{
-//             text-align: left;
-//             margin: 0,5rem;
-//             font-size: 16px;
-//             line-height: 1.1rem;
-//         }
-//         &-anchor{
-//             display: none;
-//         }
-//     }
-//  }
- 
+@media screen and (max-width: 321px) {
+    .about-text{
+        line-height: 1rem;
+        font-size: 0.8rem;
+    }
+}
