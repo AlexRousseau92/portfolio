@@ -13,7 +13,7 @@ const Home = () => {
             <div className="home-left">
                 <div className="home-description">
                     {theme}
-                    <p className="home-description-text">Je suis<br></br><span className="home-description-span">Rousseau</span><br></br> <span className="home-description-span">Alexandre</span> <br></br> Développeur <br></br>React  Junior<br></br> </p>
+                    <p className="home-description-text">Je suis<br></br><span className="home-description-span">Rousseau</span><br></br> <span className="home-description-span">Alexandre</span> <br></br> Développeur <br></br>Front-end<br></br> Junior<br></br> </p>
                 </div>
             </div>
             <div className="home-right">
