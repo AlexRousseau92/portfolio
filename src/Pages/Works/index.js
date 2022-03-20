@@ -1,3 +1,4 @@
+
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../Components/Context';
 import data from '../../Data/works';
@@ -11,20 +12,24 @@ const Works = () => {
     return (
 
         <section className={theme ? 'works light' : 'works dark'}>
-            <div className='works-cards'>
-                {
-                    data.map(({ id, title, description, link, git }) => (
-                        <div key={id} className={`works-card ${id}`}>
-                            <h1 className='works-card-title'>{title}</h1>
-                            <p className='works-card-description'>{description}</p>
-                            <div className='works-card-medias'>
-                                <a href={link} target="_blank" rel="noreferrer"><i className="fas fa-globe"></i></a>
-                                <a href={git} target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
+            {
+                data.map(({ id, title, picture, link, description }) => (
+                    <div className='works-card' key={id}>
+                        <div className='works-card-part-img'>
+                            <img src={picture} alt="capture d'ecran du projet" className='works-card-img' />
+                            <div className='works-card-filter'>
+                                <div className="works-card-links">
+                                    <div className={theme ? 'works-card-reveal light' : 'works-card-reveal dark'}><a href={link} target="_blank" rel="noreferrer">Découvrir</a></div>
+                                </div>
                             </div>
                         </div>
-                    ))
-                }
-            </div>
+                        <div className="works-card-description">
+                            <h2 className='works-card-description-title'>{title}</h2>
+                            <p className='works-card-description-text'>{description}</p>
+                        </div>
+                    </div>
+                ))
+            }
         </section>
     )
 }

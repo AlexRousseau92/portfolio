@@ -72,10 +72,10 @@ const Contact = () => {
     return (
         <section className={theme ? "contact light" : "contact dark"}>
             <form onSubmit={sendEmail} className="contact-form ">
-                <h2 className="contact-title ">Contactez moi</h2>
+                <h2 className="contact-title ">Contact me</h2>
                 <div className="alert-message"></div>
                 <label htmlFor="name" className="contact-label label-one">
-                    Nom *
+                    Name *
                     <input
                         type="text"
                         name="name"
@@ -87,7 +87,7 @@ const Contact = () => {
                     />
                 </label>
                 <label htmlFor="company" className="contact-label label-two ">
-                    Entreprise
+                    Company
                     <input
                         type="text"
                         name="company"
@@ -99,7 +99,7 @@ const Contact = () => {
                     />
                 </label>
                 <label htmlFor="phone" className="contact-label 3">
-                    Téléphone
+                    Phone
                     <input
                         type="text"
                         name="phone"
@@ -123,7 +123,7 @@ const Contact = () => {
                     />
                 </label>
                 <label htmlFor="message" className="contact-message">
-                    Votre message *
+                    Your message *
                     <textarea
                         name="message"
                         id="message"
@@ -134,7 +134,7 @@ const Contact = () => {
                     />
                 </label>
                 {/* <button type="submit" className="contact-button ">Envoyer</button> */}
-              <Button variant="contained" endIcon={<SendIcon />} type="submit" color="secondary">Envoyer</Button>
+              <Button variant="contained" endIcon={<SendIcon />} type="submit" color="secondary">Send</Button>
             </form>
         </section >
     )

@@ -15,7 +15,7 @@ const About = () => {
         <section className={theme ? "about light" : "about dark"}>
             <div className="about-left">
                 <div className="about-description">
-                    <h1 className="about-title light">Bonjour</h1>
+                    <h1 className="about-title light">Hello</h1>
                     <div className={theme ? "about-ligne light" : "about-ligne dark"}></div>
                     <p className='about-text'>
                         Après quelques années de navigation sur la seine en tant que Capitaine de bateaux, j'ai décidé de changer complétement de cap et de tourner vers ce qui m'a toujours attiré le développement web !
