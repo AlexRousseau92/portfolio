@@ -44,6 +44,16 @@
     transition: all 0.8s ease-out;
     color: vars.$primary-color;
 }
+.works-card.light{
+    background-color: vars.$alt-color;
+    color: vars.$primary-color;
+    transition: all 0.8s ease-out;
+}
+.works-card.dark{
+    background-color: vars.$top-color;
+    color: vars.$alt-color;
+    transition: all 0.5s ease-out;
+}
 .works-card-reveal.light{
     color: vars.$primary-color;
     background-color: vars.$alt-color;
@@ -53,6 +63,20 @@
     color: vars.$alt-color;
     background-color: vars.$back-color;
 }
+
+.works-card-description-progress.dark{
+    color: vars.$alt-color;
+    background-color: vars.$back-color;
+    border: 1px solid vars.$top-color;
+    transition: all 0.5s ease-out;
+}
+.works-card-description-progress.light{
+    color: vars.$alt-color;
+    background-color: vars.$primary-color;
+    transition: all 0.8s ease-out;
+    
+}
+
 
 
 .works{
@@ -71,6 +95,7 @@
         border-radius: 5px;
         margin: 2rem;
         box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
+        position: relative;
         
 
         &-part-img{
@@ -148,6 +173,22 @@
                 line-height: 1.2rem;
             }
         }
+
+        
+    }
+
+    .works-card-description-progress{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 1rem;
+
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        
     }
 
 
@@ -158,7 +199,7 @@
     @keyframes card1 {
         from {
             opacity: 0;
-            transform: translatex(-200px);
+            transform: translatex(-50px);
         }
         to {
             opacity: 1;
@@ -215,7 +256,7 @@
     @keyframes card5 {
         from {
             opacity: 0;
-            transform: translatex(100px);
+            transform: translatex(50px);
         }
         to {
             opacity: 1;

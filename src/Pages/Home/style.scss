@@ -106,17 +106,17 @@
     }
 }
 
-// @media screen and (max-width: 896px)  and (orientation : landscape){
-//     .home{
-//         height: 84vh;
-//     }
-//     .home-description-text{
-//         font-size: 1.7rem;
-//         line-height: 2.8rem;
-//     }
-//     .home-hero{
-//         height: 300px;
-//         width: 150px;
-//         margin: 0;
-//     }
-// }
+@media screen and (max-width: 896px)  and (orientation : landscape){
+    .home{
+        height: 84vh;
+    }
+    .home-description-text{
+        font-size: 1.7rem;
+        line-height: 2.8rem;
+    }
+    .home-hero{
+        height: 300px;
+        width: 150px;
+        margin: 0;
+    }
+}

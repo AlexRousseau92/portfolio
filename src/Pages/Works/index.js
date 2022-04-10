@@ -5,6 +5,7 @@ import data from '../../Data/works';
 import './style.scss';
 
 
+
 const Works = () => {
 
     const { theme } = useContext(ThemeContext);
@@ -13,8 +14,8 @@ const Works = () => {
 
         <section className={theme ? 'works light' : 'works dark'}>
             {
-                data.map(({ id, title, picture, link, description }) => (
-                    <div className='works-card' key={id}>
+                data.map(({ id, title, picture, link, description, dev }) => (
+                    <div className={theme ? 'works-card light' : 'works-card dark'} key={id}>
                         <div className='works-card-part-img'>
                             <img src={picture} alt="capture d'ecran du projet" className='works-card-img' />
                             <div className='works-card-filter'>
@@ -26,6 +27,9 @@ const Works = () => {
                         <div className="works-card-description">
                             <h2 className='works-card-description-title'>{title}</h2>
                             <p className='works-card-description-text'>{description}</p>
+                            {
+                                dev && <div className={theme ? 'works-card-description-progress light' : 'works-card-description-progress dark'}>En cours de développement</div>
+                            }
                         </div>
                     </div>
                 ))

@@ -8,38 +8,48 @@ const works = [
     {
         id: 1,
         title: 'Le Coin Fee main',
-        description: 'Réalisation d\'un site vitrine pour une petite entreprise, actuellement en cours de développement',
+        description: 'Version mobile pour une petite entreprise',
         link: "https://lecoinfeemain.surge.sh/",
-        picture: img1
+        picture: img1,
+        skill: <i class="fab fa-react"></i>,
+        dev: true
     },
     {
         id: 2,
         title: 'Trouv ton vélo',
-        description: 'Projet de fin de formation, réalisation du cahier des charges, wireframes et developpement de la partie front',
+        description: 'Projet de fin de formation. Vous avez un vélo ou vous souhaitez en louer un à un particulier ? C\'est par ici !',
         link: "https://trouv-ton-velo.surge.sh/",
-        picture: img2
+        picture: img2,
+        skill: <i class="fab fa-react"></i>,
+        dev: false
     },
     {
         id: 3,
         title: 'Gradient',
-        description: 'Projet réalisé avec redux',
+        description: 'Vous cherchez une couleur ? Projet réalisé avec React/Redux',
         link: "https://gradientxiii.surge.sh/",
-        picture: img3
+        picture: img3,
+        skill: <i class="fab fa-react"></i>,
+        dev: false
     },
     {
         id: 4,
         title: 'Todolist',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, velit?',
+        description: 'Des choses à faire ? ',
         link: "https://todolistxiii.surge.sh/",
-        picture: img4
+        picture: img4,
+        skill: <i class="fab fa-react"></i>,
+        dev: false
 
     },
     {
         id: 5,
         title: 'Converter',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, velit?',
+        description: 'Besoin de convertir une devise ?',
         link: "https://converterxiii.surge.sh/",
-        picture: img5
+        picture: img5,
+        skill: <i class="fab fa-react"></i>,
+        dev: false
     },
     
 ]
