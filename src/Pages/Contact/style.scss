@@ -58,22 +58,24 @@
           
      }
 
-     &-button{
-        width: 5rem;
-        height: 2.5rem;
-        margin: 1rem;
-        border-radius: 5px;
-        border: none;
-        font-weight: bold;
-        text-transform: uppercase;
-        padding: 0.5rem;
-        animation: button-formAnimation 0.7s ease-out;
-     }
+    //  &-button{
+    //     width: auto;
+    //     height: 2.5rem;
+    //     margin: 1rem;
+    //     border-radius: 5px;
+    //     border: none;
+    //     font-weight: bold;
+    //     text-transform: uppercase;
+    //     padding: 0.5rem;
+    //     animation: button-formAnimation 0.7s ease-out;
+    //     box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+    //  }
 }
 
 input{
    height: 2rem;
    width: 50%;
+   
    
 }
 input:focus{
@@ -221,11 +223,11 @@ textarea:focus{
         margin: 0.5rem;
     }
 
-    .contact-button{
-        margin: 0.5rem;
-        width: 3.5rem;
-        height: 2rem;
-    }
+    // .contact-button{
+    //     // margin: 0.5rem;
+    //     // width: 3.5rem;
+    //     // height: 2rem;
+    // }
 
     textarea{
         height: 5rem;

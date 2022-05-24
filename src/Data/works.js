@@ -5,15 +5,15 @@ import img4 from '../Assets/todolist.png'
 import img5 from '../Assets/converter.png'
 
 const works = [
-    {
-        id: 1,
-        title: 'Le Coin Fee main',
-        description: 'Version mobile pour une petite entreprise',
-        link: "https://lecoinfeemain.surge.sh/",
-        picture: img1,
-        skill: <i class="fab fa-react"></i>,
-        dev: true
-    },
+    // {
+    //     id: 1,
+    //     title: 'Le Coin Fee main',
+    //     description: 'Version mobile pour une petite entreprise',
+    //     link: "https://lecoinfeemain.surge.sh/",
+    //     picture: img1,
+    //     skill: <i class="fab fa-react"></i>,
+    //     dev: true
+    // },
     {
         id: 2,
         title: 'Trouv ton vélo',

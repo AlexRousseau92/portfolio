@@ -134,7 +134,7 @@ const Contact = () => {
                     />
                 </label>
                 {/* <button type="submit" className="contact-button ">Envoyer</button> */}
-              <Button variant="contained" endIcon={<SendIcon />} type="submit" color="secondary">Send</Button>
+                <Button variant="contained" endIcon={<SendIcon />} type="submit" color="secondary">Send</Button>
             </form>
         </section >
     )
